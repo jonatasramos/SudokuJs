@@ -1,0 +1,118 @@
+* {
+  font-family: sans-serif;
+  outline: none;
+}
+
+td {
+  display: inline-block;
+  width: 50px;
+  color: #444;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18pt;
+  height: 50px;
+  margin: -1px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+td:nth-child(1) {
+  border-left: 0;
+}
+
+td:nth-child(4), td:nth-child(7) {
+  border-left: 3px solid #ccc;
+}
+
+tr:nth-child(3), tr:nth-child(6){
+  display: inline-block;
+  border-bottom: 3px solid #ccc;
+}
+
+td:hover {
+  background-color: #eee;
+}
+
+.container {
+  width: 97vw;
+  height: 97vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+.table {
+  border: 1px solid #ccc;
+}
+
+.numbers {
+  /*display: none;*/
+  position: absolute;
+  /*margin: 0 auto;*/
+  background: #444;
+  font-family: 'open sans';
+  font-size: 0.85em;
+  line-height: 1.6em;
+  width: 110px;
+  height: auto;
+  color: #fff;
+  padding: 5px;
+}
+
+.numbers:after { /*Triangulo*/
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
+  /*Aqui entra a cor da "aba" do balão */
+  border-bottom: 10px solid #444;
+  top: -10px; /*localização. Experimente alterar para 'bottom'*/
+  left: 35%;
+}
+
+.numbers .btn-number {
+  display: inline-block;
+  width: 30px;
+  border: 0;
+  cursor: pointer;
+  background-color: #555;
+  text-align: center;
+  /*text-indent: -5px;*/
+  z-index: 999;
+  color: #fff;
+  padding: 2px;
+  margin-left: 3px;
+  margin-top: 5px;
+  box-shadow: 0 0 0.4px 0;
+}
+
+.numbers .btn-number:hover {
+  opacity: .7;
+}
+
+.numbers .btn-clear {
+  display: none;
+  width: 95%;
+  text-indent: 0;
+  font-size: 11pt;
+}
+
+.coluna {
+  cursor: pointer;
+}
+
+.titulo {
+  text-align: center;
+  width: 100%;
+  margin-bottom: -50px;
+  color: #ccc;
+}
+
+[data-edit="not-edit"] {
+  background-color: #ddd;
+}
